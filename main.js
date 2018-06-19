@@ -64,16 +64,16 @@ finAdvisor.sell("AMD",15,100,"sell")
 finAdvisor.sell("QCOM",16,100,"sell")
 console.log("complete Port",finAdvisor.portfolio)
 
+
 //filter for buy or sell
 let holding =finAdvisor.portfolio.filter(hold=>{
-    const assets = ( finAdvisor.portfolio.transaction === "buy");
-    console.log( "holding",hold.transaction)
+    hold.transaction === "buy";
     console.log("hold",hold)
-    console.log("assets",assets)
-    return finAdvisor.portfolio.transaction;
+    
 })
 
 console.log("holding",holding)
+
 console.log(finAdvisor.portfolio[0].transaction)
 //multiply price x volume for each object ie one for buys and one for sell
 
